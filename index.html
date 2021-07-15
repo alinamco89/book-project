@@ -1,52 +1,37 @@
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Book Shelf</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
 
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Book Shelf</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <body>
-    <!--HEADER-->
-    <header>
-      <h1>My Book Shelf</h1>
-    </header>
+  <link rel="stylesheet" type="text/css" href="./styles.css" />
+</head>
 
-    <form>
-      <!--FILTER OPTION-->
-      <!--<select name="choose" class="filter-books">
-        <option value="filter">Filter by:</option>
-        <option value="title-asc">Title A-Z</option>
-        <option value="title-desc">Title Z-A</option>
-        <option value="author-asc">Author A-Z</option>
-        <option value="author-desc">Author Z-A</option>
-      </select> -->
+<body>
+  <!--HEADER-->
+  <header>
+    <h1>My Book Shelf</h1>
+  </header>
 
-      <!--ADD THE BOOK SECTION-->
+  <form>
+    <!--ADD THE BOOK SECTION-->
 
-      <input
+    <input
         type="text"
         name="title"
         class="title"
         placeholder="Title"
         required
       />
-      <input
+    <input
         type="text"
         name="author"
         class="author"
@@ -54,14 +39,15 @@
         required
       />
 
-      <button class="submit-book" type="submit">Add Book</button>
-    </form>
+    <button class="submit-book" type="submit">Add Book</button>
+  </form>
 
-    <!--BOOK CONTAINER-->
-    <div class="book-container">
-      <ul class="book-list"></ul>
-    </div>
+  <!--BOOK CONTAINER-->
+  <div class="book-container">
+    <ul class="book-list"></ul>
+  </div>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>
