@@ -14,33 +14,42 @@ function addBook(event) {
   //Stop browser refresh when submit the button
   event.preventDefault();
 
-  //Create the single book div
-  const book = document.createElement('div');
-  book.classList.add('book');
+  if (title.value === '') {
+    alert('Please fill in the book title');
+    title.style.border = '2px solid red';
+  } else if (author.value === '') {
+    alert('Please fill in the author name');
+    author.style.border = '2px solid red';
+  } else {
+    //Create the single book div
+    const book = document.createElement('div');
+    book.classList.add('book');
 
-  //Create the Li
-  const newBook = document.createElement('li');
-  newBook.innerText =
-    toTitleCase(title.value) + ' by ' + toTitleCase(author.value);
+    //Create the Li
+    const newBook = document.createElement('li');
+    newBook.innerText =
+      toTitleCase(title.value) + ' by ' + toTitleCase(author.value);
 
-  newBook.classList.add('book-item');
-  book.appendChild(newBook);
-  //ADD BOOK TO localStorage
-  saveBooks(newBook.innerText);
+    newBook.classList.add('book-item');
+    book.appendChild(newBook);
+    //ADD BOOK TO localStorage
+    saveBooks(newBook.innerText);
 
-  //Create the DELETE button
-  const deleteBtn = document.createElement('button');
-  deleteBtn.innerHTML = '<i class="fas fa-backspace"></i>';
-  deleteBtn.classList.add('delete-btn');
-  book.appendChild(deleteBtn);
+    //Create the DELETE button
+    const deleteBtn = document.createElement('button');
+    deleteBtn.innerHTML = '<i class="fas fa-backspace"></i>';
+    deleteBtn.classList.add('delete-btn');
+    book.appendChild(deleteBtn);
 
-  //Append to the book list
-  bookList.appendChild(book);
+    //Append to the book list
+    bookList.appendChild(book);
 
-  //Clear title and author input value
-  title.value = '';
-  author.value = '';
-  console.log(newBook.innerText);
+    //Clear title and author input value
+    title.value = '';
+    author.value = '';
+    title.style.border = 'none';
+    author.style.border = 'none';
+  }
 }
 
 //Convert the title and author to CAPITALIZE
@@ -85,7 +94,6 @@ function getBooks() {
   } else {
     books = JSON.parse(localStorage.getItem('books'));
   }
-
   books.forEach(function(bookListing) {
     //Create the single book div
     const book = document.createElement('div');
